@@ -1,0 +1,173 @@
+@import "../abstracts/variables";
+
+.flex-group {
+    // padding: 10vh 10vw;
+    padding: 2rem;
+    display: flex;
+    max-width: 60rem;
+    height: 40rem;
+    overflow: hidden;
+    // place-content: center;
+    // place-items: center;
+    border-radius: 3rem;
+    box-shadow: 2rem 2rem 2rem rgba(127, 127, 127, 0.2);
+
+    @media screen and (max-width:700px){
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.result {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+
+    height: 38rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    display: grid;
+
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+
+
+    &__title {
+        color: $light-lavender;
+        text-align: center;
+        font-size: 1.5rem;
+        
+    }
+
+    &__score {
+        position: relative;
+        z-index: 2;
+        // display: inline-flex;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 10rem;
+            height: 10rem;
+            padding: 0;
+            background: linear-gradient(hsla(256, 72%, 46%, 1), hsl(241, 81%, 54%));
+            border-radius: 50%;
+            z-index: -1;
+
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            // margin: 0 auto;
+            // top: -2rem;
+            // left: 4rem;
+
+
+        }
+    }
+
+    &__score-top {
+        color: $white;
+        font-size: 3rem;
+        font-weight: 600;
+
+    }
+
+    &__score-bottom {
+        color: $light-lavender;
+        font-size: 1rem;
+    }
+
+    &__message {
+        color: $light-lavender;
+        
+        
+    }
+
+    &__message-title {
+        color: $light-lavender;
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    &__message-text {
+
+    }
+
+}
+
+
+.summary {
+    height: 30rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+    &__title {
+        color: $dark-grey;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    &__scores {
+        display: grid;
+        width: 100%;
+        height: 60%;
+        gap: 1rem;
+        
+        
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        align-items: center;
+        border-radius: 0.5rem;
+        margin: {
+            left: 2rem;
+            right: 2rem;
+        }
+        
+
+    }
+
+    &__item--reaction {
+        background-color: $red-light;
+
+    }
+
+    &__item--memory {
+        background-color: $orangey-yellow;
+    }
+
+    &__item--verbal {
+        background-color: $green-teal;
+    }
+
+    &__item--visual {
+        background-color: $cobalt-blue;
+    }
+
+
+    &__button {
+        background-color: $dark-grey;
+        width: 20rem;
+        height: 4rem;
+        border-radius: 5rem;
+        border-style: none;
+        color: $white;
+        // justify-self: center;
+        align-self: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $light-lavender;
+            color: $dark-grey;
+        }
+    }
+
+
+}
